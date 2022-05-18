@@ -69,4 +69,5 @@ function comparing(generatedAnswer) {
     resultDisplay.innerHTML = "You Win!";
     console.log(6);
   }
+  //ggggggggggggggggg
 }
