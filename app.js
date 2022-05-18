@@ -49,24 +49,17 @@ function generateComputerAnswer(resultfunc) {
 function comparing(generatedAnswer) {
   if (generatedAnswer == chosen) {
     resultDisplay.innerHTML = "Draw!";
-    console.log(0);
   } else if (generatedAnswer == "paper" && chosen == "rock") {
     resultDisplay.innerHTML = "You Lose!";
-    console.log(1);
   } else if (generatedAnswer == "paper" && chosen == "scissors") {
     resultDisplay.innerHTML = "You Win!";
-    console.log(2);
   } else if (generatedAnswer == "scissors" && chosen == "paper") {
     resultDisplay.innerHTML = "You Lose!";
-    console.log(3);
   } else if (generatedAnswer == "scissors" && chosen == "rock") {
     resultDisplay.innerHTML = "You Win!";
-    console.log(4);
   } else if (generatedAnswer == "rock" && chosen == "scissors") {
     resultDisplay.innerHTML = "You Lose!";
-    console.log(5);
   } else if (generatedAnswer == "rock" && chosen == "paper") {
     resultDisplay.innerHTML = "You Win!";
-    console.log(6);
   }
 }
