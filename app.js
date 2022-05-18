@@ -20,7 +20,8 @@ possibleChoice.forEach((choice) =>
 
 /*
 Making a function that randomly picks one of the options and shows it on the page,
-then using a callback on the resultfunc function compares its answer to the user's choice to give the game result.
+then using a callback with the resultfunc function that compares the generated answer
+to the user's choice and gives the game result.
 */
 
 function generateComputerAnswer(resultfunc) {
@@ -46,40 +47,26 @@ function generateComputerAnswer(resultfunc) {
 //writing a function that takes the generated answer and compares it to the user's choice to give the result of the game
 
 function comparing(generatedAnswer) {
-  switch (generatedAnswer) {
-    case chosen:
-      resultDisplay.innerHTML = "Draw!";
-      console.log(0);
-      break;
-    case "paper":
-    case chosen == "rock":
-      resultDisplay.innerHTML = "You Lose!";
-      console.log(1);
-      break;
-    case "scissorrs":
-    case chosen == "rock":
-      resultDisplay.innerHTML = "You Win!";
-      console.log(2);
-      break;
-    case "scissorrs":
-    case chosen == "paper":
-      resultDisplay.innerHTML = "You Lose!";
-      console.log(3);
-      break;
-    case "rock":
-    case chosen == "paper":
-      resultDisplay.innerHTML = "You Win!";
-      console.log(4);
-      break;
-    case "rock":
-    case chosen == "scissors":
-      resultDisplay.innerHTML = "You lose!";
-      console.log(5);
-      break;
-    case "paper":
-    case chosen == "scissors":
-      resultDisplay.innerHTML = "You Win!";
-      console.log(6);
-      break;
+  if (generatedAnswer == chosen) {
+    resultDisplay.innerHTML = "Draw!";
+    console.log(0);
+  } else if (generatedAnswer == "paper" && chosen == "rock") {
+    resultDisplay.innerHTML = "You Lose!";
+    console.log(1);
+  } else if (generatedAnswer == "paper" && chosen == "scissors") {
+    resultDisplay.innerHTML = "You Win!";
+    console.log(2);
+  } else if (generatedAnswer == "scissors" && chosen == "paper") {
+    resultDisplay.innerHTML = "You Lose!";
+    console.log(3);
+  } else if (generatedAnswer == "scissors" && chosen == "rock") {
+    resultDisplay.innerHTML = "You Win!";
+    console.log(4);
+  } else if (generatedAnswer == "rock" && chosen == "scissors") {
+    resultDisplay.innerHTML = "You Lose!";
+    console.log(5);
+  } else if (generatedAnswer == "rock" && chosen == "paper") {
+    resultDisplay.innerHTML = "You Win!";
+    console.log(6);
   }
 }
